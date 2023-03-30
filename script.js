@@ -2,8 +2,8 @@
 function validate(){
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			let age = document.getElementById('age');
-			let name = document.getElementById('name');
+			let age = document.getElementById('age').value;
+			let name = document.getElementById('name').value;
 			if(age>18){
 				resolve("Welcome, ${name}. You can vote.");
 			}else{
