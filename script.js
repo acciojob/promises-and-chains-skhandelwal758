@@ -1,1 +1,24 @@
 //your JS code here. If required.
+function validate(){
+	return new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			let age = document.getElementById('age');
+			let name = document.getElementById('name');
+			if(age>18){
+				resolve("Welcome, ${name}. You can vote.");
+			}else{
+				reject("Oh sorry ${name}. You aren't old enough.");
+			}
+				
+		}, 4000);
+		
+	});
+
+	
+}
+
+validate.then((res)=>{
+	alert(res);
+}).catch((e)=>{
+	alert(e);
+})
