@@ -4,7 +4,7 @@ function validate(){
 		setTimeout(()=>{
 			let age = document.getElementById('age').value;
 			let name = document.getElementById('name').value;
-			if(age>18){
+			if(age>=18){
 				resolve(`Welcome, ${name}. You can vote.`);
 			}else{
 				reject(`Oh sorry ${name}. You aren't old enough.`);
