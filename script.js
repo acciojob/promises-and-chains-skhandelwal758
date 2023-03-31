@@ -2,11 +2,11 @@
 function validate(){
     let age = document.getElementById('age').value;
 	let name = document.getElementById('name').value;
-    if(age=="" || name==""){
-        alert("input fields cannot be empty");
-        return ;
+    // if(age=="" || name==""){
+    //     alert("input fields cannot be empty");
+    //     return ;
                 
-    }
+    // }
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			
