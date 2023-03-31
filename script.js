@@ -5,9 +5,9 @@ function validate(){
 			let age = document.getElementById('age').value;
 			let name = document.getElementById('name').value;
 			if(age>18){
-				resolve("Welcome, ${name}. You can vote.");
+				resolve(`Welcome, ${name}. You can vote.`);
 			}else{
-				reject("Oh sorry ${name}. You aren't old enough.");
+				reject(`Oh sorry ${name}. You aren't old enough.`);
 			}
 				
 		}, 4000);
@@ -17,8 +17,12 @@ function validate(){
 	
 }
 
-validate.then((res)=>{
+function ageVerify(){
+
+validate().then((res)=>{
+    // console.log(res);
 	alert(res);
-}).catch((e)=>{
-	alert(e);
-})
+}).catch((err)=>{
+    alert(err);
+});
+}
