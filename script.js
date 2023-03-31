@@ -1,11 +1,21 @@
 //your JS code here. If required.
 function validate(){
+    let age = document.getElementById('age').value;
+	let name = document.getElementById('name').value;
+    if(age=="" || name==""){
+        alert("input fields cannot be empty");
+        return ;
+                
+    }
 	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			let age = document.getElementById('age').value;
-			let name = document.getElementById('name').value;
-			if(age>=18){
-				resolve(`Welcome, ${name}. You can vote.`);
+			
+            // console.log(age, name);
+			if(age>18){
+            
+                var ans = `Welcome, ${name}. You can vote.`;
+                // console.log(ans);
+				resolve(ans);
 			}else{
 				reject(`Oh sorry ${name}. You aren't old enough.`);
 			}
